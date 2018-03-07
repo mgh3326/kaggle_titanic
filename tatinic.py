@@ -22,8 +22,8 @@ print(train['Survived'][train['Sex'] == 'female'].value_counts(normalize=True))
 
 train["Child"] = float('NaN')
 
-# train["Child"][train['Age'] < 18] = 1 이거 안되네
-# train["Child"][train['Age'] >= 18] = 0
+train["Child"][train['Age'] < 18] = 1 #이거 이상한거 떠도 되긴 되네 너무 신기
+train["Child"][train['Age'] >= 18] = 0
 
 print(train["Survived"][train["Child"] == 1].value_counts(normalize=True))
 
